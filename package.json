@@ -1,0 +1,15 @@
+{
+  "name": "guit",
+  "version": "0.0.1",
+  "description": "Helloworld",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo  \"Starting application in dev mode\" && electron ."
+  },
+  "author": "Alpha Prechtl",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^27.1.2"
+  }
+}
