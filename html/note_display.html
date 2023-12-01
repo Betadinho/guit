@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="../css/fretboard.css">
+    <title>Guit</title>
+</head>
+
+<body>
+    <div class="header">
+        <a href="../index.html"><</a>
+        <h1>Fretboard Visualization</h1>
+    </div>
+    
+    <section>
+        <div class="guitar-neck">
+
+            <div class="fret first"></div>
+            <div class="fret"></div>
+            <div class="fret"></div>
+            <div class="fret"></div>
+            <div class="fret"></div>
+            <div class="fret"></div>
+            <div class="fret"></div>
+            <div class="fret"></div>
+            <div class="fret"></div>
+            <div class="fret"></div>
+            <div class="fret"></div>
+            <div class="fret"></div>
+            <div class="fret"></div>
+
+            <ul class="dots">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="strings">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <ul class="open-notes">
+                <li class="low-e">E</li>
+                <li class="b">B</li>
+                <li class="g">G</li>
+                <li class="d">D</li>
+                <li class="a">A</li>
+                <li class="high-e">E</li>
+            </ul>
+            <div class="notes">
+                <div class="mask low-e">
+                    <ul id="mask_low_e_list"></ul>
+                </div>
+                <div class="mask a">
+                    <ul id="mask_a_list"></ul>
+                </div>
+                <div class="mask d">
+                    <ul id="mask_d_list"></ul>
+                </div>
+                <div class="mask g">
+                    <ul id="mask_g_list"></ul>
+                </div>
+                <div class="mask b">
+                    <ul id="mask_b_list"></ul>
+                </div>
+                <div class="mask high-e">
+                    <ul id="mask_high_e_list"></ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <a class="up" href="#">Tune 1/2 Step Up</a>
+            <a tyoe="text" id="tune_down_btn" class="down" href="#">Tune 1/2 Step Down</a>
+
+            <h2>Choose note to show:</h2>
+            <ul>
+                <li>All</li>
+                <li>A</li>
+                <li>A#</li>
+                <li>B</li>
+                <li>C</li>
+                <li>C#</li>
+                <li>D</li>
+                <li>D#</li>
+                <li>E</li>
+                <li>F</li>
+                <li>F#</li>
+                <li>G</li>
+                <li>G#</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <script src="../js/fretboard.js"></script>
+</body>
+
+</html>
