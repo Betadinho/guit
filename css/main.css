@@ -1,0 +1,38 @@
+body {
+    background-color: #121212;
+    color: #eee;
+
+}
+
+.button, .primary {
+    background-color: #ff7597;
+}
+
+.secondary {
+    background-color: #ff0266;
+}
+
+.text-secondary {
+    color: #ff0266;
+}
+
+.headcontent {
+    display: flex;
+    height: 6vh;
+    align-items: center;
+}
+
+.arrow-back {
+    display: inline-block;
+    text-decoration: none;
+    color: #ff7597;
+    
+}
+
+.title {
+    display: inline-block;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+

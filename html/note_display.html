@@ -6,13 +6,23 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <link rel="stylesheet" href="../css/fretboard.css">
+    <link rel="stylesheet" href="../css/main.css">
     <title>Guit</title>
 </head>
 
 <body>
     <div class="header">
-        <a href="../index.html"><</a>
-        <h1>Fretboard Visualization</h1>
+        <span class="headcontent">
+            <a href="../index.html" class="arrow-back">
+                <svg width="42" height="42" viewBox="0 0 1024 1024" fill="#ff0266" class="icon" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M669.6 849.6c8.8 8 22.4 7.2 30.4-1.6s7.2-22.4-1.6-30.4l-309.6-280c-8-7.2-8-17.6 0-24.8l309.6-270.4c8.8-8 9.6-21.6 2.4-30.4-8-8.8-21.6-9.6-30.4-2.4L360.8 480.8c-27.2 24-28 64-0.8 88.8l309.6 280z"
+                        fill="" />
+                </svg>
+            </a>
+            <h1 class="text-secondary title">Fretboard</h1>
+        </span>
     </div>
     
     <section>
@@ -78,24 +88,24 @@
         </div>
 
         <div class="controls">
-            <a class="up" href="#">Tune 1/2 Step Up</a>
-            <a tyoe="text" id="tune_down_btn" class="down" href="#">Tune 1/2 Step Down</a>
+            <a class="up button" href="#">Tune 1/2 Step Up</a>
+            <a tyoe="text button" id="tune_down_btn" class="down" href="#">Tune 1/2 Step Down</a>
 
-            <h2>Choose note to show:</h2>
+            <h2 class="text-secondary">Choose note to show:</h2>
             <ul>
-                <li>All</li>
-                <li>A</li>
-                <li>A#</li>
-                <li>B</li>
-                <li>C</li>
-                <li>C#</li>
-                <li>D</li>
-                <li>D#</li>
-                <li>E</li>
-                <li>F</li>
-                <li>F#</li>
-                <li>G</li>
-                <li>G#</li>
+                <li class="secondary">All</li>
+                <li class="secondary">A</li>
+                <li class="secondary">A#</li>
+                <li class="secondary">B</li>
+                <li class="secondary">C</li>
+                <li class="secondary">C#</li>
+                <li class="secondary">D</li>
+                <li class="secondary">D#</li>
+                <li class="secondary">E</li>
+                <li class="secondary">F</li>
+                <li class="secondary">F#</li>
+                <li class="secondary">G</li>
+                <li class="secondary">G#</li>
             </ul>
         </div>
 

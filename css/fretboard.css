@@ -13,9 +13,10 @@
 }
 
 body {
-    background: #eee;
+    background: #121212;
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 0.05em;
+    color: #eee;
 }
 
 h1 {
@@ -48,7 +49,7 @@ h1 {
 }
 
 .guitar-neck .open-notes li.active {
-    color: #fa990f;
+    color: #bb86fc;
 }
 
 .guitar-neck .fret {
@@ -151,7 +152,7 @@ h1 {
     width: 30px;
     height: 30px;
     margin-right: 50px;
-    background: #fa990f;
+    background-color: #ff7597;
     color: #fff;
     border-radius: 50%;
     text-align: center;
