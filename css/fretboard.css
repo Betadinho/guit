@@ -200,6 +200,10 @@ h1 {
     margin-right: 40px;
 }
 
+.controls a.down:hover, .controls a.up:hover{
+    background-color: #ff7597;
+}
+
 .controls a.down {
     margin-right: 0;
 }
