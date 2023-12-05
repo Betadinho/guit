@@ -183,9 +183,10 @@ h1 {
 .controls {
     position: relative;
     margin-top: 40px;
-    left: 50%;
-    margin-left: -380px;
-    width: 760px;
+    left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
     height: 300px;
     text-align: center;
     color: #333;
@@ -210,14 +211,61 @@ h1 {
 
 .controls ul li {
     float: left;
-    width: 40px;
-    height: 20px;
+    width: 70px;
+    height: 30px;
     background: #333;
     color: #fff;
-    margin-right: 20px;
     cursor: pointer;
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    flex-grow: 1;
+
+    border-left: 1px solid grey;
+    
+}
+
+.controls ul li:hover {
+    background-color: #ff7597;
 }
 
 .controls ul li:last-child {
     margin-right: 0;
+    border-right: 1px solid grey;
+}
+
+
+.chord-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.chord-control ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.note-picker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.chord-base {
+    text-align: center;
+
+}
+
+.chord-modifiers {
+    text-align: center;
 }
