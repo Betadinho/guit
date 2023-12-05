@@ -273,3 +273,7 @@ h1 {
 .chord-modifiers {
     text-align: center;
 }
+
+ul li.active {
+    background-color: #ff7597;
+}

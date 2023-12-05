@@ -1,6 +1,7 @@
 var slideSpeed = 300;
 var noteToShow = "All";
 var canClick = true;
+var currentNote = document.querySelector('.note-picker .active'); 
 
 var notes = {
     e: ['E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E'],
@@ -71,10 +72,19 @@ docReady( () => {
         return false;
     });
 
-    document.querySelectorAll('.controls li').forEach(notes => {
+    document.querySelectorAll('.controls .note-picker li').forEach(notes => {
         notes.addEventListener('click', event => {
             noteToShow = event.target.textContent;
+            currentNote = document.querySelector('.note-picker .active');;
             showNotes(noteToShow);
+            
+            if(!event.target.classList.contains('active')) {
+                event.target.classList.toggle('active')
+                currentNote.classList.toggle('active')
+            }
+            currentNote = event.target;
+            
+            
         });
     });
 })
