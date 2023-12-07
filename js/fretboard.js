@@ -1,7 +1,8 @@
 var slideSpeed = 300;
 var noteToShow = "All";
 var canClick = true;
-var currentNote = document.querySelector('.note-picker .active'); 
+var currentNote = document.querySelector('.note-picker .active');
+var currentChord;
 
 var notes = {
     e: ['E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E'],
@@ -75,18 +76,35 @@ docReady( () => {
     document.querySelectorAll('.controls .note-picker li').forEach(notes => {
         notes.addEventListener('click', event => {
             noteToShow = event.target.textContent;
-            currentNote = document.querySelector('.note-picker .active');;
+            currentNote = document.querySelector('.note-picker .active');
             showNotes(noteToShow);
             
             if(!event.target.classList.contains('active')) {
+                if(currentChord) currentChord.classList.remove('active')
                 event.target.classList.toggle('active')
-                currentNote.classList.toggle('active')
+                if (currentNote) currentNote.classList.toggle('active')
             }
             currentNote = event.target;
-            
-            
         });
     });
+
+    document.querySelectorAll('.controls .chord-base li').forEach(chord => {
+        chord.addEventListener('click', event => {
+            console.log(currentNote.textContent);
+            chordToShow = event.target.textContent;
+
+            if(!event.target.classList.contains('active')) {
+                event.target.classList.toggle('active');
+                if(currentChord && currentChord !== event.target) {
+                    currentChord.classList.remove('active');
+                }
+                if(currentNote.classList.contains('active')) currentNote.classList.toggle('active')
+                currentChord = event.target;
+            }
+        });
+    });
+
+    //document.querySelectorAll.forEach(modifier => {});
 })
 
 function docReady(fn) {
