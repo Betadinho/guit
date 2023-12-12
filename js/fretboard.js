@@ -156,8 +156,23 @@ function showNotes(noteToShow) {
 }
 
 function showChord(chordToShow, modifier) {
-    if(!modifier) modifier = '5'
-    console.log(chords[modifier][chordToShow]);
+    if(!modifier) modifier = '5';
+    let chordNotes = chords[modifier][chordToShow]
+    let notesToShow
+    let notesToRemove = document.querySelectorAll('.guitar-neck .notes li');
+    
+    notesToRemove.forEach(el => {
+        //el.animate({ opacity: 0 }, 500);
+        el.style.opacity = 0;
+    })
+    
+    chordNotes.forEach(note => {
+        notesToShow = document.querySelectorAll('.guitar-neck .notes li[note="' + note + '"]')
+        notesToShow.forEach(el => {
+            //el.animate({ opacity: 1 }, 500);
+            el.style.opacity = 1;
+        })
+    })
 }
 
 function changeOpenNotes() {
