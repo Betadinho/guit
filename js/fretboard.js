@@ -94,6 +94,7 @@ docReady( () => {
     document.querySelectorAll('.controls .chord-base li').forEach(chord => {
         chord.addEventListener('click', event => {
             chordToShow = event.target.textContent;
+            showChord(chordToShow);
 
             if(!event.target.classList.contains('active')) {
                 event.target.classList.toggle('active');
@@ -152,6 +153,11 @@ function showNotes(noteToShow) {
             el.style.opacity = 1;
         })
     }
+}
+
+function showChord(chordToShow, modifier) {
+    if(!modifier) modifier = '5'
+    console.log(chords[modifier][chordToShow]);
 }
 
 function changeOpenNotes() {
