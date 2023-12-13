@@ -4,6 +4,7 @@ var canClick = true;
 var currentNote = document.querySelector('.note-picker .active');
 var currentChord;
 var currentModifier;
+var chordToShow;
 
 var notes = {
     e: ['E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E'],
@@ -109,8 +110,11 @@ docReady( () => {
 
     document.querySelectorAll('.controls .chord-modifiers li').forEach(modifier => {
         modifier.addEventListener('click', event => {
+            mod = event.target.textContent;
+            console.log(chordToShow, mod);
+            showChord(chordToShow, mod);
+
             if(chordToShow) {
-                modifierToShow = event.target.textContent;
                 if (!event.target.classList.contains('active')) {
                     event.target.classList.toggle('active');
                     if (currentModifier && currentModifier !== event.target) {
@@ -160,7 +164,6 @@ function showChord(chordToShow, modifier) {
     let chordNotes = chords[modifier][chordToShow]
     let notesToShow
     let notesToRemove = document.querySelectorAll('.guitar-neck .notes li');
-    
     notesToRemove.forEach(el => {
         //el.animate({ opacity: 0 }, 500);
         el.style.opacity = 0;
@@ -172,6 +175,7 @@ function showChord(chordToShow, modifier) {
             //el.animate({ opacity: 1 }, 500);
             el.style.opacity = 1;
         })
+        console.log(chordNotes);
     })
 }
 
