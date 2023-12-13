@@ -23,9 +23,7 @@ for (let i = 0; i < notes.e.length; i++) {
     document.getElementById('mask_high_e_list').insertAdjacentHTML('beforeend', '<li note=' + notes.e[i] + '>' + notes.e[i] + '</li>');
 };
 
-docReady( () => {
-    console.log("DocReady");
-    
+docReady( () => {    
     document.querySelector('.controls a.down').addEventListener('click', () => {
         if (!canClick) { return false; };
         canClick = false;
@@ -96,7 +94,9 @@ docReady( () => {
     document.querySelectorAll('.controls .chord-base li').forEach(chord => {
         chord.addEventListener('click', event => {
             chordToShow = event.target.textContent;
-            showChord(chordToShow);
+
+            if (currentModifier) showChord(chordToShow, currentModifier.textContent);
+                else showChord(chordToShow);            
 
             if(!event.target.classList.contains('active')) {
                 event.target.classList.toggle('active');
@@ -111,17 +111,21 @@ docReady( () => {
 
     document.querySelectorAll('.controls .chord-modifiers li').forEach(modifier => {
         modifier.addEventListener('click', event => {
-            mod = event.target.textContent;
-            console.log(chordToShow, mod);
-            showChord(chordToShow, mod);
 
             if(chordToShow) {
                 if (!event.target.classList.contains('active')) {
                     event.target.classList.toggle('active');
+                    mod = event.target.textContent;
+                    showChord(chordToShow, mod);
+
                     if (currentModifier && currentModifier !== event.target) {
                         currentModifier.classList.remove('active');
                     };
                     currentModifier = event.target;
+                } else {
+                    event.target.classList.remove('active');
+                    showChord(chordToShow);
+                    currentModifier = null;
                 }
             }
         });
@@ -176,7 +180,6 @@ function showChord(chordToShow, modifier) {
             //el.animate({ opacity: 1 }, 500);
             el.style.opacity = 1;
         })
-        console.log(chordNotes);
     })
 }
 
