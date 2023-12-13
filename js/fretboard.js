@@ -88,6 +88,7 @@ docReady( () => {
 
             currentNote = event.target;
             chordToShow = null;
+            currentModifier = null;
         });
     });
 
