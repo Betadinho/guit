@@ -210,7 +210,7 @@ h1 {
 
 .controls h2 {
     text-transform: uppercase;
-    margin: 40px 0;
+    margin: 25px 0;
 }
 
 .controls ul li {
@@ -230,6 +230,8 @@ h1 {
     flex-grow: 1;
 
     border-left: 1px solid grey;
+
+    transition: background-color .2s ease-in-out;
     
 }
 
@@ -276,4 +278,10 @@ h1 {
 
 ul li.active {
     background-color: #ff7597;
+}
+
+#noteList {
+    margin-bottom: 40px;
+    margin-top: 10px;
+    color: #ff7597;
 }

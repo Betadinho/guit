@@ -145,13 +145,15 @@ function docReady(fn) {
 
 function showNotes(noteToShow) {
     if (noteToShow == "All") {
+        document.querySelector('#chordNotes').textContent = 'No Chord Selected'
         let all = document.querySelectorAll('.guitar-neck .notes li');
         all.forEach( el => {
             //el.animate({ opacity: 1 }, 500);
             el.style.opacity = 1;
         });
-
+        
     } else {
+        document.querySelector('#chordNotes').textContent = noteToShow
         let notesToRemove = document.querySelectorAll('.guitar-neck .notes li:not([note="'+ noteToShow +'"])');
         notesToRemove.forEach(el => {
             //el.animate({ opacity: 0 }, 500);
@@ -170,6 +172,9 @@ function showChord(chordToShow, modifier) {
     let chordNotes = chords[modifier][chordToShow];
     let notesToShow;
     let notesToRemove = document.querySelectorAll('.guitar-neck .notes li');
+
+    document.querySelector('#chordNotes').textContent = chordNotes;
+
     notesToRemove.forEach(el => {
         //el.animate({ opacity: 0 }, 500);
         el.style.opacity = 0;
