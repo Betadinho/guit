@@ -1,0 +1,47 @@
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #eee;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    margin-top: 40px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls ul li {
+    width: 100%;
+    height: 40px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    flex-grow: 1;
+
+    transition: background-color .2s ease-in-out;
+
+}
+
+.controls ul li:hover {
+    background-color: #ff7597;
+}

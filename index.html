@@ -6,20 +6,26 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Guit</title>
 </head>
 
 <body>
-    <h1>Guit!</h1>
-
-
-    <div class="test-links">
-        <ul>
-            <li><button><a href="html/note_display.html">Fretboard, note and chord visualization</a></button></li>
-        </ul>
+    <div class="header">
+        <span class="headcontent">
+            <h1 class="text-secondary title">Guit</h1>
+        </span>
     </div>
-
-    <script src="./js/test.js"></script>
+    <div class="content">            
+            
+            <div class="controls">
+                <ul>
+                    <a href="html/note_display.html"><b><li>Fretboard, note and chord visualization</li></b></a>
+                </ul>
+            </div>
+            
+            <script src="./js/test.js"></script>
+    </div>
 </body>
 
 </html>
