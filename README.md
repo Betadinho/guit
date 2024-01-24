@@ -1,13 +1,13 @@
 # Features
 
 ### Show all the notes on the neck
-![All Notes on the neck](docs/images/screenshot1.png)
+![All Notes on the neck](docs/images/Screenshot1.png)
 
 ### Show all occurrances of a specific note on the neck
-![Specific notes on the neck](docs/images/screenshot2.png)
+![Specific notes on the neck](docs/images/Screenshot2.png)
 
 ### Show all occurrances of the notes that make up a specific chord
-![Chords](docs/images/screenshot3.png)
+![Chords](docs/images/Screenshot3.png)
 # TODO
 
 ## Interface
